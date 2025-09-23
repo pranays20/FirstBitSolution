@@ -28,14 +28,14 @@ This folder is for **assignments given on a weekly or 3–5 day basis**.
 Assignments are organized based on weeks, topics, or date ranges for better clarity.
 
 Example structure:
-
+```
 Assignments/
 ├── Week1/
 │ ├── Assignment1.md
 │ └── Assignment2.py
 ├── Week2/
 │ └── ...
-
+```
 
 ---
 
