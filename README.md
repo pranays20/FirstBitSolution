@@ -7,7 +7,7 @@ This repository is created to maintain and organize all the important work relat
 
 ## 📁 Folder Structure
 
-FirstBitSol/
+'''FirstBitSol/
 │
 ├── 📂 Modules/ # Contains different modules/topics covered
 ├── 📂 Assignments/ # Contains weekly or periodic assignments (every 3–5 days)
