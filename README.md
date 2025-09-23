@@ -1,13 +1,13 @@
-# FirstBitSol
+# FirstBitSolutions
 
-Welcome to the **FirstBitSol** repository!  
+Welcome to the **FirstBitSolutions** repository!  
 This repository is created to maintain and organize all the important work related to daily learning, weekend tasks, assignments, and modules covered during the course or training sessions.
 
 ---
 
 ## 📁 Folder Structure
 
-```FirstBitSol/
+```FirstBitSolutions/
 │
 ├── 📂 Modules/ # Contains different modules/topics covered
 ├── 📂 Assignments/ # Contains weekly or periodic assignments (every 3–5 days)
