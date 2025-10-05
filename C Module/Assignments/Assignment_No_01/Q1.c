@@ -1,6 +1,9 @@
+#include<stdio.h>
 void main()
 {
-	//1.add two integers and display the result
-	int a = 10 ,b = 20;
-	printf("Addition of two no is : %d",a+b);
+	int a =22;
+	if(a%2==0)
+		printf("%d is even number..!",a);
+	else
+		printf("%d is odd number..!",a);
 }

@@ -1,9 +1,9 @@
+#include<stdio.h>
 void main()
 {
-	//4.swap two numbers using a temporary third variable.
-	 int a = 10, b = 20, temp;
-	    temp = a;
-    	a = b;
-    	b = temp;
-    printf("After swapping: a = %d, b = %d\n", a, b);
+	char ch = 'b'; 
+    if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+        printf("%c is a Vowel", ch);
+    else
+        printf("%c is a Consonant", ch);
 }

@@ -1,12 +1,17 @@
 #include<stdio.h>
 void main()
 {
-	int start = 1,end = 8,sum = 0;
-	while(start<=end)
-	{
-		 sum = sum + start;
-		 start++;
-	}
-	printf("%d",sum);
 	
+	for(int k=1;k<=500;k++)
+	{
+		int no = k , i=1 , sum=0;
+		while(i<=no/2)
+		{
+			if (no%i==0)
+				sum = sum +i;
+			i++;
+		}
+		if(no == sum)
+			printf("%d is perfect\n",no);
+	}			
 }

@@ -1,11 +1,10 @@
 #include<stdio.h>
 void main()
 {
-	int a,b,c;
-    printf("Enter 3 sides: ");
-    scanf("%d%d%d",&a,&b,&c);
-
-    if(a==b && b==c) printf("Equilateral");
-    else if(a==b || b==c || a==c) printf("Isosceles");
-    else printf("Scalene");
+	int no=5,i=1;
+	while(i<=10)
+	{
+		printf("%d\n",i*no);
+		i++;
+	}
 }

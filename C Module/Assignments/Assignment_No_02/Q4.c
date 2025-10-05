@@ -1,9 +1,17 @@
-#include<stdio.h>
-void main()
-{
-	char ch = 'b'; 
-    if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
-        printf("%c is a Vowel", ch);
+#include <stdio.h>
+void main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d",&marks);
+
+    if(marks > 75)
+        printf("Distinction\n");
+    else if(marks > 65)
+        printf("First Class\n");
+    else if(marks > 55)
+        printf("Second Class\n");
+    else if(marks >= 40)
+        printf("Pass Class\n");
     else
-        printf("%c is a Consonant", ch);
+        printf("Fail\n");
 }

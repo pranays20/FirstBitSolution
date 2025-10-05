@@ -1,12 +1,15 @@
-void main()
-{
-	//7.convert given minutes into hours and remaining minutes.
-		
-	int totalMinutes = 130;  
-	int hours, minutes;
+#include <stdio.h>
 
-	hours = totalMinutes / 60;
-	minutes = totalMinutes % 60;
+void main() {
+    int age = 25; 
 
-	printf("Hours = %d, Minutes = %d\n", hours, minutes);
+    if (age < 12)
+        printf("Child");
+    else if (age <= 19)
+        printf("Teenager");
+    else if (age <= 59)
+        printf("Adult");
+    else
+        printf("Senior");
+
 }

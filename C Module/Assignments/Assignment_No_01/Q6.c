@@ -1,12 +1,16 @@
+#include<stdio.h>
 void main()
 {
-	//6.find the square and cube of a given number.
-	int num = 5;
-	int square, cube;
+	char ch = 'p';
+	if (ch >= 'A' && ch <= 'Z') 
+	{
+        printf("%c is Uppercase", ch);
+    }  
+    else
+	{
+       printf("%c is Lowercase", ch);
+    }
+    
+        
 
-	square = num * num;
-	cube = num * num * num;
-
-	printf("Square = %d\n", square);
-	printf("Cube = %d\n", cube);
 }
