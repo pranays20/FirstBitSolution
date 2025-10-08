@@ -3,14 +3,7 @@ void main()
 {
 	char ch = 'p';
 	if (ch >= 'A' && ch <= 'Z') 
-	{
-        printf("%c is Uppercase", ch);
-    }  
+        printf("%c is Uppercase", ch); 
     else
-	{
        printf("%c is Lowercase", ch);
-    }
-    
-        
-
 }
