@@ -1,15 +1,30 @@
 #include <stdio.h>
 void main() {
-    int age;
-    printf("Enter age: ");
-    scanf("%d",&age);
+ 
+    float price = 550;          
+    char is_student = 'y';     
 
-    if(age < 12)
-        printf("Child\n");
-    else if(age <= 19)
-        printf("Teenager\n");
-    else if(age <= 59)
-        printf("Adult\n");
-    else
-        printf("Senior\n");
+    float discount = 0, final_price;
+
+    if (is_student == 'y' || is_student == 'Y') {
+        if (price > 500) {
+            discount = price * 0.20;
+        } else {
+            discount = price * 0.10;
+        }
+    } else {
+        if (price > 600) {
+            discount = price * 0.15;
+        } else {
+            discount = 0;
+        }
+    }
+
+    final_price = price - discount;
+
+    printf("Price: %.2f\n", price);
+    printf("Student: %c\n", is_student);
+    printf("Discount Applied: %.2f\n", discount);
+    printf("Final Price after discount: %.2f\n", final_price);
+
 }
