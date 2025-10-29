@@ -96,7 +96,7 @@ ClassWork/
 All your internal or module tests are stored here in separate folders like Test_01, Test_02, etc.
 Each test folder contains .c files for every question in that test.
 
-## **🧾 Example:**
+## 🧾 Example:
 ```
 Test/
 └── Test_01/
@@ -122,4 +122,4 @@ This structured repository helps you:
 3. Commit and push your changes regularly to keep your repository up to date.  
 
 
-**##✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀**
+** ## ✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀 ## **
