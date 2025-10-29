@@ -105,36 +105,21 @@ Test/
     └── Q3.c
 ```
 
-**🎯 Purpose
-**
+## 🎯 Purpose
 This structured repository helps you:
 
-🗂️ Keep all your work organized and easy to navigate
+- 📁 **Keep all your work organized** and easy to navigate  
+- 📊 **Track your learning progress** over time  
+- 🔍 **Quickly find assignments, classwork, or tests** for revision  
+- 💻 **Maintain a professional record** of your programming practice  
+- 🚀 **Easily push updates or share your work** on GitHub  
 
-📅 Track your learning progress over time
+---
 
-🔍 Quickly find assignments, classwork, or tests for revision
-
-💻 Maintain a professional record of your programming practice
-
-🚀 Easily push updates or share your work on GitHub
-
-**🚀 How to Use**
-
-Open the respective folder (Assignments, ClassWork, or Test)
-
-Add or update files based on your current tasks
-
-Commit and push your changes regularly to keep your repository up to date
-
-Follow the naming format:
-
-Assignment_No_XX → For assignments
-
-Test_XX → For test folders
-
-File names like Q1.c, Q2.c, etc. for individual questions
-
+## 🍀 How to Use
+1. Open the respective folder (**Assignments**, **ClassWork**, or **Test**).  
+2. Add or update files based on your current tasks.  
+3. Commit and push your changes regularly to keep your repository up to date.  
 
 
 **✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀**
