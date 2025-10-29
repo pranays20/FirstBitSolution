@@ -1,4 +1,4 @@
-**## 🧠 FirstBitSolutions**
+** ## 🧠 FirstBitSolutions **
 
 Welcome to the FirstBitSolutions repository!
 This repository is designed to store and manage all your learning materials, assignments, classwork, and tests related to your C Programming Module and future modules.
