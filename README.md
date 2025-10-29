@@ -4,6 +4,8 @@ Welcome to the FirstBitSolutions repository!
 This repository is designed to store and manage all your learning materials, assignments, classwork, and tests related to your C Programming Module and future modules.
 It helps maintain a clean, professional, and organized learning journey.
 
+--- 
+
 ## 📁 Folder Structure
 ```
 FirstBitSolutions/
@@ -44,6 +46,8 @@ FirstBitSolutions/
         └── 📂 Test_03/
             └── ...
 ```
+---
+
 ## 🧩 Folder Details
 ## 📂 C_Module/
 
@@ -104,6 +108,8 @@ Test/
     ├── Q2.c
     └── Q3.c
 ```
+
+---
 
 ## 🎯 Purpose
 This structured repository helps you:
