@@ -1,80 +1,140 @@
-# FirstBitSolutions
+**🧠 FirstBitSolutions**
 
-Welcome to the **FirstBitSolutions** repository!  
-This repository is created to maintain and organize all the important work related to daily learning, weekend tasks, assignments, and modules covered during the course or training sessions.
+Welcome to the FirstBitSolutions repository!
+This repository is designed to store and manage all your learning materials, assignments, classwork, and tests related to your C Programming Module and future modules.
+It helps maintain a clean, professional, and organized learning journey.
 
----
-
-## 📁 Folder Structure
-
-```FirstBitSolutions/
-│
-├── 📂 Modules/ # Contains different modules/topics covered
-├── 📂 Assignments/ # Contains weekly or periodic assignments (every 3–5 days)
-└── 📂 ClassWork/ # Contains notes, exercises, and practice from class sessions
+**📁 Folder Structure**
 ```
----
+FirstBitSolutions/
+│
+└── 📂 C_Module/
+    │
+    ├── 📂 Assignments/          # Contains all assignment folders
+    │   ├── 📂 Assignment_No_00/  # Initial or setup assignments
+    │   │   ├── Q1.c
+    │   │   ├── Q2.c
+    │   │   └── ...
+    │   │
+    │   ├── 📂 Assignment_No_01/
+    │   │   ├── Q1.c
+    │   │   ├── Q2.c
+    │   │   ├── Q3.c
+    │   │   └── ...
+    │   │
+    │   ├── 📂 Assignment_No_02/
+    │   │   └── ...
+    │   │
+    │   └── 📂 Assignment_No_03/
+    │       └── ...
+    │
+    ├── 📂 ClassWork/            # Contains daily classroom practice files
+    │   ├── StringFunctions.c
+    │   ├── ArrayPractice.c
+    │   ├── PointersDemo.c
+    │   └── ...
+    │
+    └── 📂 Test/                 # Contains test folders with respective test files
+        ├── 📂 Test_01/
+        │   ├── Q1.c
+        │   ├── Q2.c
+        │   └── Q3.c
+        ├── 📂 Test_02/
+        │   └── ...
+        └── 📂 Test_03/
+            └── ...
+```
+**🧩 Folder Details
+📂 C_Module/**
 
-### 📂 Modules/
-This folder includes all the major topics or concepts divided into separate modules. Each module may include:
-- Topic-wise notes
-- Reference code
-- Exercises or mini-projects
+The C_Module folder includes everything related to your C programming course — from early exercises to full assignments, classwork, and test files.
 
----
+**📂 Assignments/**
 
-### 📂 Assignments/
-This folder is for **assignments given on a weekly or 3–5 day basis**.  
-Assignments are organized based on weeks, topics, or date ranges for better clarity.
+This section includes your assignment folders.
+Each folder is named as Assignment_No_XX, where XX represents the assignment number.
 
-Example structure:
+**🗂️ Example:**
 ```
 Assignments/
-├── Week1/
-│ ├── Assignment1.md
-│ └── Assignment2.py
-├── Week2/
-│ └── ...
+├── Assignment_No_00/
+│   ├── Q1.c
+│   ├── Q2.c
+│   └── ...
+├── Assignment_No_01/
+│   ├── Q1.c
+│   ├── Q2.c
+│   └── Q3.c
+└── Assignment_No_02/
+    └── ...
+
+```
+Each .c file represents an individual problem or program from that assignment.
+
+**📂 ClassWork/**
+
+This folder includes source files and notes from daily practice sessions conducted during classes.
+
+You can store:
+
+Programs demonstrated during lectures
+
+Concept-based examples (loops, arrays, strings, pointers, etc.)
+
+Reference files for revision
+
+**🧾 Example:**
+```
+ClassWork/
+├── LoopsPractice.c
+├── ArraysDemo.c
+└── StringFunctions.c
 ```
 
----
+**📂 Test/**
 
-### 📂 ClassWork/
-Includes content and exercises completed during regular class sessions.  
-You can store:
-- Notes taken during lectures
-- In-class exercises
-- Demo codes provided by the trainer
+All your internal or module tests are stored here in separate folders like Test_01, Test_02, etc.
+Each test folder contains .c files for every question in that test.
 
----
+**🧾 Example:**
+```
+Test/
+└── Test_01/
+    ├── Q1.c
+    ├── Q2.c
+    └── Q3.c
+```
 
-## 🎯 Purpose
+**🎯 Purpose
+**
+This structured repository helps you:
 
-This repository helps to:
-- Keep track of all learning progress
-- Maintain a consistent record of assignments and classwork
-- Organize files by modules and dates for quick access
-- Review past work anytime
+🗂️ Keep all your work organized and easy to navigate
 
----
+📅 Track your learning progress over time
 
-## 🚀 How to Use
+🔍 Quickly find assignments, classwork, or tests for revision
 
-- Open the respective folder (`Modules`, `Assignments`, `ClassWork`)
-- Add or update files as per the latest tasks or sessions
-- Push your changes regularly to keep the repository up to date
+💻 Maintain a professional record of your programming practice
 
----
+🚀 Easily push updates or share your work on GitHub
 
-## 🗓️ Update Log
+**🚀 How to Use**
 
-Use this section to log your progress or important updates:
+Open the respective folder (Assignments, ClassWork, or Test)
+
+Add or update files based on your current tasks
+
+Commit and push your changes regularly to keep your repository up to date
+
+Follow the naming format:
+
+Assignment_No_XX → For assignments
+
+Test_XX → For test folders
+
+File names like Q1.c, Q2.c, etc. for individual questions
 
 
----
 
-Feel free to contribute and update as you progress through your learning journey!
-
-Happy Coding! 💻✨
-
-
+**✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀**
