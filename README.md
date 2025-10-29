@@ -1,10 +1,10 @@
-###**🧠 FirstBitSolutions**
+**##🧠 FirstBitSolutions**
 
 Welcome to the FirstBitSolutions repository!
 This repository is designed to store and manage all your learning materials, assignments, classwork, and tests related to your C Programming Module and future modules.
 It helps maintain a clean, professional, and organized learning journey.
 
-##**📁 Folder Structure**
+##📁 Folder Structure
 ```
 FirstBitSolutions/
 │
@@ -44,12 +44,12 @@ FirstBitSolutions/
         └── 📂 Test_03/
             └── ...
 ```
-##**🧩 Folder Details
-📂 C_Module/**
+##🧩 Folder Details
+📂 C_Module/
 
 The C_Module folder includes everything related to your C programming course — from early exercises to full assignments, classwork, and test files.
 
-##**📂 Assignments/**
+##📂 Assignments/
 
 This section includes your assignment folders.
 Each folder is named as Assignment_No_XX, where XX represents the assignment number.
@@ -71,7 +71,7 @@ Assignments/
 ```
 Each .c file represents an individual problem or program from that assignment.
 
-##**📂 ClassWork/**
+##📂 ClassWork/
 
 This folder includes source files and notes from daily practice sessions conducted during classes.
 
@@ -91,7 +91,7 @@ ClassWork/
 └── StringFunctions.c
 ```
 
-**📂 Test/**
+##📂 Test/
 
 All your internal or module tests are stored here in separate folders like Test_01, Test_02, etc.
 Each test folder contains .c files for every question in that test.
@@ -122,4 +122,4 @@ This structured repository helps you:
 3. Commit and push your changes regularly to keep your repository up to date.  
 
 
-**✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀**
+**##✨ Happy Coding & Keep Learning with FirstBitSolutions! 💻🚀**
