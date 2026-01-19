@@ -10,42 +10,51 @@ It helps maintain a clean, professional, and organized learning journey.
 ```
 FirstBitSolutions/
 │
-└── 📂 C_Module/
+├── 📂 C_Module/
+│   │
+│   ├── 📂 Assignments/          # Contains all assignment folders
+│   │   ├── 📂 Assignment_No_00/  # Initial or setup assignments
+│   │   │   ├── Q1.c
+│   │   │   ├── Q2.c
+│   │   │   └── ...
+│   │   │
+│   │   ├── 📂 Assignment_No_01/
+│   │   │   ├── Q1.c
+│   │   │   ├── Q2.c
+│   │   │   ├── Q3.c
+│   │   │   └── ...
+│   │   │
+│   │   ├── 📂 Assignment_No_02/
+│   │   │   └── ...
+│   │   │
+│   │   └── 📂 Assignment_No_03/
+│   │       └── ...
+│   │
+│   ├── 📂 ClassWork/            # Contains daily classroom practice files
+│   │   ├── StringFunctions.c
+│   │   ├── ArrayPractice.c
+│   │   ├── PointersDemo.c
+│   │   └── ...
+│   │
+│   └── 📂 Test/                 # Contains test folders with respective test files
+│       ├── 📂 Test_01/
+│       │   ├── Q1.c
+│       │   ├── Q2.c
+│       │   └── Q3.c
+│       ├── 📂 Test_02/
+│       │   └── ...
+│       └── 📂 Test_03/
+│           └── ...
+│
+└── 📂 MySQL_Module/
     │
-    ├── 📂 Assignments/          # Contains all assignment folders
-    │   ├── 📂 Assignment_No_00/  # Initial or setup assignments
-    │   │   ├── Q1.c
-    │   │   ├── Q2.c
-    │   │   └── ...
-    │   │
-    │   ├── 📂 Assignment_No_01/
-    │   │   ├── Q1.c
-    │   │   ├── Q2.c
-    │   │   ├── Q3.c
-    │   │   └── ...
-    │   │
-    │   ├── 📂 Assignment_No_02/
-    │   │   └── ...
-    │   │
-    │   └── 📂 Assignment_No_03/
-    │       └── ...
-    │
-    ├── 📂 ClassWork/            # Contains daily classroom practice files
-    │   ├── StringFunctions.c
-    │   ├── ArrayPractice.c
-    │   ├── PointersDemo.c
-    │   └── ...
-    │
-    └── 📂 Test/                 # Contains test folders with respective test files
-        ├── 📂 Test_01/
-        │   ├── Q1.c
-        │   ├── Q2.c
-        │   └── Q3.c
-        ├── 📂 Test_02/
-        │   └── ...
-        └── 📂 Test_03/
-            └── ...
-```
+    └── 📂 Assignments/
+        ├── 📂 Assignment_No_00/
+        │   └── Assignment_0.txt
+        ├── 📂 Assignment_No_01/
+        │   └── Assignment_1.txt
+        └── ...
+
 ---
 
 ## 🧩 Folder Details
