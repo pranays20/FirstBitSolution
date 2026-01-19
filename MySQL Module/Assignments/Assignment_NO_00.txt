@@ -1,0 +1,188 @@
+MySQL Assignment - 0
+Hotel Management System
+--------------------------------------------------
+
+1) Database Selection
+
+	mysql> CREATE DATABASE hotel_management;
+	Query OK, 1 row affected (0.02 sec)
+	
+	mysql> USE hotel_management;
+	Database changed
+
+--------------------------------------------------
+
+2) Customer Registration Table
+	(Customers must register with email before booking)
+	
+	mysql> CREATE TABLE customers (
+	    -> customer_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> customer_name VARCHAR(50),
+	    -> email VARCHAR(100) NOT NULL UNIQUE,
+	    -> phone_no VARCHAR(15)
+	    -> );
+	
+	Query OK, 0 rows affected (0.05 sec)
+
+	mysql> DESC customers;
+	+---------------+--------------+------+-----+---------+----------------+
+	| Field         | Type         | Null | Key | Default | Extra          |
+	+---------------+--------------+------+-----+---------+----------------+
+	| customer_id   | int          | NO   | PRI | NULL    | auto_increment |
+	| customer_name | varchar(50)  | YES  |     | NULL    |                |
+	| email         | varchar(100) | NO   | UNI | NULL    |                |
+	| phone_no      | varchar(15)  | YES  |     | NULL    |                |
+	+---------------+--------------+------+-----+---------+----------------+
+	
+	--------------------------------------------------
+
+3) Rooms Table
+	(Room types and specific rent)
+
+	mysql> CREATE TABLE rooms (
+	    -> room_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> room_type VARCHAR(20),
+	    -> rent INT
+	    -> );
+
+	Query OK, 0 rows affected (0.04 sec)
+
+	mysql> DESC rooms;
+	+-----------+-------------+------+-----+---------+----------------+
+	| Field     | Type        | Null | Key | Default | Extra          |
+	+-----------+-------------+------+-----+---------+----------------+
+	| room_id   | int         | NO   | PRI | NULL    | auto_increment |
+	| room_type | varchar(20) | YES  |     | NULL    |                |
+	| rent      | int         | YES  |     | NULL    |                |
+	+-----------+-------------+------+-----+---------+----------------+
+	
+	--------------------------------------------------
+
+4) Room Booking Table
+	(Customer must be registered before booking)
+
+	mysql> CREATE TABLE bookings (
+	    -> booking_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> customer_id INT,
+	    -> room_id INT,
+	    -> check_in DATE,
+	    -> check_out DATE,
+	    -> FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+	    -> FOREIGN KEY (room_id) REFERENCES rooms(room_id)
+	    -> );
+
+	Query OK, 0 rows affected (0.06 sec)
+
+	mysql> DESC bookings;
+	+-------------+------+------+-----+---------+----------------+
+	| Field       | Type | Null | Key | Default | Extra          |
+	+-------------+------+------+-----+---------+----------------+
+	| booking_id  | int  | NO   | PRI | NULL    | auto_increment |	
+	| customer_id | int  | YES  | MUL | NULL    |                |
+	| room_id     | int  | YES  | MUL | NULL    |                |
+	| check_in    | date | YES  |     | NULL    |                |
+	| check_out   | date | YES  |     | NULL    |                |
+	+-------------+------+------+-----+---------+----------------+
+
+	--------------------------------------------------
+	
+5) Food Menu Table
+	(Food charges based on selection)
+
+	mysql> CREATE TABLE food_menu (
+	    -> food_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> food_name VARCHAR(50),
+	    -> price INT
+	    -> );
+
+	Query OK, 0 rows affected (0.04 sec)
+
+	mysql> DESC food_menu;
+	+-----------+-------------+------+-----+---------+----------------+
+	| Field     | Type        | Null | Key | Default | Extra          |
+	+-----------+-------------+------+-----+---------+----------------+
+	| food_id   | int         | NO   | PRI | NULL    | auto_increment |
+	| food_name | varchar(50) | YES  |     | NULL    |                |
+	| price     | int         | YES  |     | NULL    |                |
+	+-----------+-------------+------+-----+---------+----------------+
+
+	--------------------------------------------------
+
+6) Laundry Service Table
+	(Laundry charged Rs 20 per cloth)
+
+	mysql> CREATE TABLE laundry (
+	    -> laundry_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> customer_id INT,
+	    -> clothes_count INT,
+	    -> amount INT,
+	    -> FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+	    -> );
+
+	Query OK, 0 rows affected (0.05 sec)
+
+	mysql> DESC laundry;
+	+---------------+------+------+-----+---------+----------------+
+	| Field         | Type | Null | Key | Default | Extra          |
+	+---------------+------+------+-----+---------+----------------+
+	| laundry_id    | int  | NO   | PRI | NULL    | auto_increment |
+	| customer_id   | int  | YES  | MUL | NULL    |                |
+	| clothes_count | int  | YES  |     | NULL    |                |
+	| amount        | int  | YES  |     | NULL    |                |
+	+---------------+------+------+-----+---------+----------------+
+	
+	--------------------------------------------------
+	
+7) Site Visit Table
+	(Charges based on days and vehicle)
+	
+	mysql> CREATE TABLE site_visits (
+	    -> visit_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> customer_id INT,
+	    -> vehicle_type VARCHAR(30),
+	    -> days INT,
+	    -> rate_per_day INT,
+	    -> FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+	    -> );
+	
+	Query OK, 0 rows affected (0.06 sec)
+
+	mysql> DESC site_visits;
+	+---------------+-------------+------+-----+---------+----------------+
+	| Field         | Type        | Null | Key | Default | Extra          |
+	+---------------+-------------+------+-----+---------+----------------+
+	| visit_id      | int         | NO   | PRI | NULL    | auto_increment |
+	| customer_id   | int         | YES  | MUL | NULL    |                |
+	| vehicle_type  | varchar(30) | YES  |     | NULL    |                |
+	| days          | int         | YES  |     | NULL    |                |
+	| rate_per_day  | int         | YES  |     | NULL    |                |
+	+---------------+-------------+------+-----+---------+----------------+
+
+	--------------------------------------------------
+
+8) Invoice Table
+	(Invoice generation)
+	
+	mysql> CREATE TABLE invoice (
+	    -> invoice_id INT PRIMARY KEY AUTO_INCREMENT,
+	    -> customer_id INT,
+	    -> total_amount INT,
+	    -> invoice_date DATE,
+	    -> FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+	    -> );
+	
+	Query OK, 0 rows affected (0.05 sec)
+
+	mysql> DESC invoice;
+	+--------------+------+------+-----+---------+----------------+
+	| Field        | Type | Null | Key | Default | Extra          |
+	+--------------+------+------+-----+---------+----------------+
+	| invoice_id   | int  | NO   | PRI | NULL    | auto_increment |
+	| customer_id  | int  | YES  | MUL | NULL    |                |
+	| total_amount | int  | YES  |     | NULL    |                |
+	| invoice_date | date | YES  |     | NULL    |                |
+	+--------------+------+------+-----+---------+----------------+
+
+	--------------------------------------------------
+
+Done.
