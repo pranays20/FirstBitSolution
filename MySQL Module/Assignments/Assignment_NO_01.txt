@@ -1,0 +1,141 @@
+1)	mysql> use firstbit_sql;
+	Database changed
+	mysql> CREATE TABLE countries (
+    	->     country_id INT,
+    	->     country_name VARCHAR(50),
+   	->     region_id INT
+    	-> );
+
+
+	Query OK, 0 rows affected (0.06 sec)
+	mysql> desc countries;
+	+--------------+-------------+------+-----+---------+-------+
+	| Field        | Type        | Null | Key | Default | Extra |	
+	+--------------+-------------+------+-----+---------+-------+
+	| country_id   | int         | YES  |     | NULL    |       |
+	| country_name | varchar(50) | YES  |     | NULL    |       |
+	| region_id    | int         | YES  |     | NULL    |       |
+	+--------------+-------------+------+-----+---------+-------+
+	3 rows in set (0.00 sec)
+
+2)	mysql> CREATE TABLE jobs (
+    	->     job_id INT PRIMARY KEY,
+    	->     job_title VARCHAR(50) NOT NULL,
+    	->     min_salary INT,
+    	->     max_salary INT CHECK (max_salary <= 25000)
+    	-> );
+
+	Query OK, 0 rows affected (0.05 sec)
+	
+	mysql> desc jobs;
+	+------------+-------------+------+-----+---------+-------+
+	| Field      | Type        | Null | Key | Default | Extra |
+	+------------+-------------+------+-----+---------+-------+
+	| job_id     | int         | YES  |     | NULL    |       |
+	| job_title  | varchar(50) | YES  |     |         |       |
+	| min_salary | int         | YES  |     | 8000    |       |
+	| max_salary | int         | YES  |     | NULL    |       |
+	+------------+-------------+------+-----+---------+-------+
+	4 rows in set (0.00 sec)
+
+3)	mysql> CREATE TABLE job_history (
+    	->     employee_id INT,
+    	->     start_date DATE,
+    	->     end_date DATE,
+    	->     job_id INT,
+    	->     department_id INT
+    	-> );
+	
+	Query OK, 0 rows affected (0.03 sec)
+	mysql> desc job_history;
+	+---------------+------+------+-----+---------+-------+	
+	| Field         | Type | Null | Key | Default | Extra |
+	+---------------+------+------+-----+---------+-------+
+	| employee_id   | int  | YES  |     | NULL    |       |
+	| start_date    | date | YES  |     | NULL    |       |
+	| end_date      | date | YES  |     | NULL    |       |
+	| job_id        | int  | YES  |     | NULL    |       |
+	| department_id | int  | YES  |     | NULL    |       |
+	+---------------+------+------+-----+---------+-------+
+	5 rows in set (0.00 sec)
+
+4)	mysql> ALTER TABLE countries
+    	-> ADD CONSTRAINT uk_country_id UNIQUE (country_id);
+	
+	Query OK, 0 rows affected (0.04 sec)
+	Records: 0  Duplicates: 0  Warnings: 0
+
+5)	 DROP TABLE jobs;
+	Query OK, 0 rows affected (0.03 sec)
+
+	mysql> CREATE TABLE jobs (
+    	->     job_id INT,
+    	->     job_title VARCHAR(50) DEFAULT ' ',
+    	->     min_salary INT DEFAULT 8000,
+    	->     max_salary INT DEFAULT NULL
+    	-> );
+	Query OK, 0 rows affected (0.03 sec)
+
+	mysql> DESC jobs;
+	+------------+-------------+------+-----+---------+-------+
+	| Field      | Type        | Null | Key | Default | Extra |
+	+------------+-------------+------+-----+---------+-------+
+	| job_id     | int         | YES  |     | NULL    |       |
+	| job_title  | varchar(50) | YES  |     |         |       |
+	| min_salary | int         | YES  |     | 8000    |       |
+	| max_salary | int         | YES  |     | NULL    |       |
+	+------------+-------------+------+-----+---------+-------+
+	4 rows in set (0.00 sec)
+
+6)	mysql> ALTER TABLE departments
+    	-> ADD CONSTRAINT uk_dept_mgr UNIQUE (department_id, manager_id);
+	
+	Query OK, 0 rows affected (0.04 sec)
+	Records: 0  Duplicates: 0  Warnings: 0
+
+	mysql> desc  departments;
+	+-----------------+-------------+------+-----+---------+-------+
+	| Field           | Type        | Null | Key | Default | Extra |
+	+-----------------+-------------+------+-----+---------+-------+
+	| department_id   | int         | NO   | PRI | NULL    |       |
+	| department_name | varchar(50) | YES  |     | NULL    |       |
+	| manager_id      | int         | YES  |     | NULL    |       |
+	| location_id     | int         | YES  |     | NULL    |       |
+	+-----------------+-------------+------+-----+---------+-------+
+	4 rows in set (0.00 sec)
+
+7)	mysql> CREATE TABLE employees (
+    	->     employee_id INT UNIQUE,
+    	->     first_name VARCHAR(50),
+    	->     last_name VARCHAR(50),
+    	->     email VARCHAR(50),
+    	->     phone_number VARCHAR(20),
+    	->     hire_date DATE,
+    	->     job_id INT,
+    	->     salary INT,
+    	->     commission DECIMAL(5,2),
+    	->     manager_id INT,
+    	->     department_id INT,
+    	->     CONSTRAINT fk_dept_mgr
+    	->     FOREIGN KEY (department_id, manager_id)
+    	->     REFERENCES departments (department_id, manager_id)
+    	-> );
+	Query OK, 0 rows affected (0.11 sec)
+	
+	mysql> desc  employees;
+	+---------------+--------------+------+-----+---------+-------+
+	| Field         | Type         | Null | Key | Default | Extra |
+	+---------------+--------------+------+-----+---------+-------+
+	| employee_id   | int          | YES  | UNI | NULL    |       |
+	| first_name    | varchar(50)  | YES  |     | NULL    |       |
+	| last_name     | varchar(50)  | YES  |     | NULL    |       |
+	| email         | varchar(50)  | YES  |     | NULL    |       |
+	| phone_number  | varchar(20)  | YES  |     | NULL    |       |
+	| hire_date     | date         | YES  |     | NULL    |       |
+	| job_id        | int          | YES  |     | NULL    |       |
+	| salary        | int          | YES  |     | NULL    |       |
+	| commission    | decimal(5,2) | YES  |     | NULL    |       |
+	| manager_id    | int          | YES  |     | NULL    |       |
+	| department_id | int          | YES  | MUL | NULL    |       |
+	+---------------+--------------+------+-----+---------+-------+
+	11 rows in set (0.00 sec)
