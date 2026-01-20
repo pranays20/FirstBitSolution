@@ -54,7 +54,7 @@ FirstBitSolutions/
         ├── 📂 Assignment_No_01/
         │   └── Assignment_1.txt
         └── ...
-
+```
 ---
 
 ## 🧩 Folder Details
@@ -68,7 +68,7 @@ This section includes your assignment folders.
 Each folder is named as Assignment_No_XX, where XX represents the assignment number.
 
 ## 🗂️ Example:
-
+```
 Assignments/
 ├── Assignment_No_00/
 │   ├── Q1.c
