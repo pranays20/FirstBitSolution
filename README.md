@@ -68,7 +68,7 @@ This section includes your assignment folders.
 Each folder is named as Assignment_No_XX, where XX represents the assignment number.
 
 ## 🗂️ Example:
-```
+
 Assignments/
 ├── Assignment_No_00/
 │   ├── Q1.c
